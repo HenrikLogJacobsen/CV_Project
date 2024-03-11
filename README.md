@@ -21,4 +21,5 @@ tation tasks in autonomous driving, aiming to correctly classify each pixel in t
 
 # TODO:
 - Load in data
+- Visualize data
 - Experiment with Ultralytics
