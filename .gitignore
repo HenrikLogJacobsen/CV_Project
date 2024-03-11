@@ -1,2 +1,5 @@
 frame*.png
 frame*.txt
+images/
+train.txt
+labels_yolo_v1.1/
