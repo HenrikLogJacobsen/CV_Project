@@ -1,5 +1,5 @@
 frame*.png
 frame*.txt
-images/
+data/images/
 train.txt
 labels_yolo_v1.1/
