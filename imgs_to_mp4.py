@@ -1,11 +1,6 @@
-from ultralytics import YOLO
 import cv2
 import os
 
-
-
-# Load in a sample image
-image_shape = (128,1024)
 image_sample = cv2.imread('data/images/frame_000000.PNG')
 image_height, image_width, _ = image_sample.shape
 
@@ -27,10 +22,3 @@ for image_file in image_files:
 
 # Release the VideoWriter object
 video_writer.release()
-
-# Pretrained YOLOv8n model
-model = YOLO('yolov8n.pt')
-
-# Inference
-results = model(source=video_file, conf=.4, imgsz=(image_height,image_width), save=True, save_txt=True)
-

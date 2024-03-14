@@ -3,3 +3,7 @@ frame*.txt
 data/images/
 train.txt
 labels_yolo_v1.1/
+*.mp4
+*.png
+*.PNG
+*.avi

@@ -18,8 +18,3 @@ addition to inference speed.
 
 - <b>Recommended Loss Function:</b> Cross-entropy loss is a common choice for multi-class segmen-
 tation tasks in autonomous driving, aiming to correctly classify each pixel in the image.
-
-# TODO:
-- Load in data
-- Visualize data
-- Experiment with Ultralytics
