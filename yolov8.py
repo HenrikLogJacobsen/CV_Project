@@ -3,8 +3,9 @@ import cv2
 import os
 
 
-image_shape = (128,1024)
 source = 'output_video.mp4'
+frame_size = (128,1024)
+confidence = .2
 
 # Pretrained YOLOv8n model
 model = YOLO('yolov8n.pt')
@@ -23,8 +24,8 @@ for key, value in model.names.items():
 # Inference
 results = model(
     source=source,
-    conf=.2,
-    imgsz=image_shape, 
+    conf=confidence,
+    imgsz=frame_size, 
     save=True, 
     #save_txt=True, # includes BB labes
     classes=classes,
