@@ -11,10 +11,25 @@ model = YOLO('yolov8n.pt')
 
 # Setting detectable classes
 with open('data/names.txt', 'r') as f:
-    classes = [line.strip() for line in f]
+    target_classes = [line.strip() for line in f]
 
-# Set the class filter
+classes = []
+for key, value in model.names.items():
+    if value in target_classes:
+        classes.append(key)
+
+# NOTE: Scooter and rider class missing
 
 # Inference
-results = model(source=source, conf=.4, imgsz=image_shape, save=True, save_txt=True, classes=classes, stream=True)
+results = model(
+    source=source,
+    conf=.2,
+    imgsz=image_shape, 
+    save=True, 
+    #save_txt=True, # includes BB labes
+    classes=classes,
+    stream=True
+)
 
+for result in results:
+    pass
